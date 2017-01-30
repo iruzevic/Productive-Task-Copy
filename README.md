@@ -1,6 +1,11 @@
 ## Install Tampermonkey browser extension
 
-Add script, turn on and add this to settings.
+Quick add task to clipboard for faster copying to time entry.
+* format: "#id - task title" ("#580 - Disable with submit")
 
-* Run at: "document-idle"
-* User Include: "/(^https:\/\/app\.productive\.io\/1-infinum\/tasks?\?.*?$)/"
+#### Setup
+* Add script
+* Turn on
+* Add this to settings.
+  * Run at: "document-idle"
+  * User Include: "/(^https:\/\/app\.productive\.io\/1-infinum\/tasks?\?.*?$)/"
