@@ -19,7 +19,7 @@
                      var $id = $self.attr('id');
                      var $selectedElementNumberText = $.trim($self.find('.project-task-item__number-inner').text());
                      var $selectedElementTitle= $self.find('.project-task-item__title');
-                     var $selectedElementTitleText = $.trim($selectedElementTitle.text());
+                     var $selectedElementTitleText = $.trim($selectedElementTitle.text()).replace(/"/g, '\'');
                      var combinedString = '#' + $selectedElementNumberText + ' - ' + $selectedElementTitleText;
                      $self.find('.project-task-item__wrapper').append('<span style="font-size:14px">&nbsp;&nbsp;|&nbsp;&nbsp;<a href="#" class="copy-link" data-id="'+$id+'">Copy</a><input type="text" style="position:absolute;left:-50000px" id="input-'+$id+'" value="'+combinedString+'" /></span>');
                  });
