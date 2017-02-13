@@ -3,8 +3,10 @@
 // @namespace    http://tampermonkey.net/
 // @version      0.1
 // @description  try to take over the world!
-// @author       You
-// @match        https://app.productive.io/1-infinum/tasks?filter=LTEtdGFza3M%3D
+// @author       Ivan Ružević
+// @include      /(^https:\/\/app\.productive\.io\/1-infinum\/tasks?\?.*?$)/
+// @require      /Users/ruzevic/projects/private/productive-task-copy/index.js
+// @run-at       document-idle
 // @grant        none
 // ==/UserScript==
 
@@ -12,6 +14,7 @@
 (function() {
     'use strict';
     $(document).ajaxComplete(function (event, jqxhr, settings) {
+        console.log('aaa');
          if(typeof jqxhr.responseJSON !== 'undefined' && typeof jqxhr.responseJSON.data[0] !== 'undefined') {
              if(jqxhr.responseJSON.data[0].type === 'task') {
                  jQuery.each(jQuery('.project-task-list__task'), function(i, val) {
