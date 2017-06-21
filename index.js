@@ -4,7 +4,7 @@
 // @version      0.1
 // @description  Productive Copy task button
 // @author       Ivan Ružević
-// @include      /(^https:\/\/app\.productive\.io\/1-infinum\/tasks?\?.*?$)/
+// @include      https://app.productive.io/1-infinum/*
 // @run-at       document-idle
 // @grant        none
 // ==/UserScript==
